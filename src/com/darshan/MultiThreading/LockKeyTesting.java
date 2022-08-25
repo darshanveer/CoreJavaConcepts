@@ -6,8 +6,8 @@ So any other thread trying to execute the same method or any other static synchr
 
 Any thread T1 which executes a NON static synchronized method will acquire instance key. 
 So any other thread trying to execute the same method or any other non static method in the same instance will 
-have to wait for T1. Threads trying to execute static sync methods wouldn’t wait for T1 as they will get the key 
-from the class object. Also, threads on a different instance of the same class wouldn’t wait either as they will 
+have to wait for T1. Threads trying to execute static sync methods wouldnâ€™t wait for T1 as they will get the key 
+from the class object. Also, threads on a different instance of the same class wouldnâ€™t wait either as they will 
 have that instance specific key.
 */
 import java.time.format.DateTimeFormatter;  
@@ -62,8 +62,6 @@ public class LockKeyTesting {
 
 class A {
 
-	private Object key1 = new Object();
-	private Object key2 = new Object();
 	static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("sHH:mm:ss.SSS");
 	
 
